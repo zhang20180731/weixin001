@@ -1,0 +1,60 @@
+<!--pages/desc/desc.wxml-->
+<view wx:for="{{desc}}" wx:key="item.id">
+  <view class="pic_container"> 
+    <image src="{{'http://127.0.0.1:4000/'+item.pic}}" mode="aspectFill" lazy-load></image>
+  </view>
+  <view class="tandp">
+    <text class="desc_title">{{item.title}}</text>
+    <view class="desc_price">{{item.price}}</view>
+  </view>
+</view>
+<view class="divider"></view>
+<view class="count">
+   <text class="countnum">数量</text>
+   <text class="countchoose">已选{{num}}件</text>
+   <view class='numberbox sum'>
+        <text class='{{state}}' type='number' bindtap='incream'>-</text>
+        <input bindinput='num' value='{{num}}'></input>
+        <text bindtap='add'>+</text>
+    </view>
+</view>
+<view class="divider"></view>
+<view class="evalute">
+   <text class="evalute_text">评价</text>  
+</view>
+<view class="evalute_content">暂无评价</view>
+<view class="divider"></view>
+<view class="destails">
+   <view class="details_title">
+       <view class="flex {{Tab ==1 ? 'active' : ''}}" bindtap="change" data-id="1">
+          <text>图书详情 </text>  
+          <text class="{{Tab==1?'linenew':'line'}}">————</text>
+       </view>
+       <view class="flex  {{Tab ==2 ? 'active' : ''}}"  bindtap="change" data-id="2">
+          <text>出版信息</text>           
+          <text class="{{Tab==2?'linenew':'line'}}">————</text>
+       </view>
+   </view>
+   <view class="content">
+      <image mode='aspectFill' lazt-load src="http://127.0.0.1:4000/img/tou.jpg"></image>
+  
+   </view>
+</view>
+<view  wx:for="{{descpic}}" wx:key="item.id">
+    <image src="{{'http://127.0.0.1:4000/'+item}}" class="picture"></image>
+</view>
+<view class="fixed">
+  <view class="Bottom">
+    <view class="desc_zx">
+        <image  src="/pages/img/咨询.png"></image>
+        <text>咨询</text>
+    </view>
+    <view class="desc_zx" bindtap="gotocart">
+        <text class="{{ishide==0?'total_count':''}}">{{cartnum}}</text>
+        <image src="/pages/img/yy.png"></image>
+        <text>购物车</text>
+    </view>
+    <text class="addcart" bindtap="addgwc">加入购物车</text>
+    <text class="buy">立即购买</text>
+  </view>
+</view>

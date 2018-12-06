@@ -1,0 +1,36 @@
+<!--pages/cart/cart.wxml-->
+<view class="Dir">
+   <text class="direction" bindtap="direction">{{del==1?'编辑':'完成'}}</text>
+</view>
+<view class="divider"></view>
+<view class="Container">
+  <view class="book" wx:for="{{cartcontent}}" wx:key="item.id">
+      <checkbox-group bindchange="checkboxChange" data-id="{{item.id}}">
+          <label class="checkbox">
+            <checkbox checked=""/>{{item.value}}
+          </label>
+      </checkbox-group> 
+      <view class="book1">
+        <image src="{{'http://127.0.0.1:4000/'+item.pic}}"></image>
+      </view>
+      <view class="book2">
+        <text class="title">{{item.title}}</text>
+        <text class="price">{{item.price}}</text>
+        <view class='numberbox sum'>
+          <text class='{{state}}' type='number' bindtap='incream' data-id="{{item.id}}">-</text>   
+          <input bindinput='num' value='{{item.count}}'></input>     
+          <text bindtap='add' data-id="{{item.id}}">+</text>
+        </view>
+      </view>
+  </view>
+</view>
+<view class="bottom">
+    <label class="total_checkbox">
+        <checkbox checked=""/><text class="all"> 全选</text>
+    </label>
+    <view class="{{del==1?'money':'moneynew'}}">
+      <text class="total_total">总计:</text>
+      <text class="total_price">{{s}}</text>
+    </view>
+    <view class="{{del==1?'pay':'paynew'}}" bindtap="remove">{{del==1?'去付款':'删除'}}</view>
+</view>

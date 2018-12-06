@@ -1,0 +1,13 @@
+<view class="avatar">
+    <view class="tx">
+        <image src="/pages/img/1.jpg"></image>
+        <view class="login">登录</view> 
+    </view>
+</view>
+<view class="cell">
+  <view class="cell-item arrow">我的订单</view>
+  <view class="cell-item arrow">我的收货地址</view>
+  <view class="cell-item arrow">我的优惠券</view>
+  <view class="cell-item arrow">联系客服</view>
+</view>
+

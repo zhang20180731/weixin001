@@ -1,0 +1,160 @@
+/* pages/cart/cart.wxss */
+page{
+  background: #f1f1f1
+}
+.Dir{
+  background: #fff;
+}
+.direction{
+   background: #fff;
+   font-size:14px;
+   margin-left:90%;
+}
+.divider{
+  height:20rpx;
+  background-color:#f1f1f1;
+  text-align:center;
+  line-height:90rpx;
+}
+.checkbox{
+  position:relative;
+  top:30%;
+  left:45%;
+}
+.Container{
+  margin-bottom:105rpx;
+}
+.book{
+  background: #fff;
+  width:100%;
+  display:flex;
+  padding:10rpx 5rpx;
+  position:relative;
+}
+.book1{
+  width:32%;
+  height:219rpx;
+  text-align: center;
+}
+.book1 image{
+  width:90%;
+  height:100%;
+}
+.book2{
+  width:60%;
+}
+.title{
+  font-size:14px;
+  color:#505050;
+  width:55%;
+  position:absolute;
+  top:40rpx;
+}
+.price{
+  color:#FF4444;
+  font-size:14px;
+  margin-left:5rpx;
+  font-weight:bold;
+  position:absolute;
+  bottom:20%;
+  left:39%;
+}
+.book2 image{
+  width:60rpx;
+  height:60rpx;
+  position:absolute;
+  right:85rpx;
+  bottom:30rpx;
+}
+.numberbox {
+  position:absolute;
+  bottom:15%;
+  right:5%;
+  width:80px;
+  height:26px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.numberbox text {
+float: left;
+width: 19px;
+line-height: 26px;
+text-align: center;
+}
+/*数值*/
+.numberbox input {
+width: 40px;
+height: 26px;
+float: left;
+margin: 0 auto;
+text-align: center;
+font-size: 12px;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+}
+/*普通样式*/
+.numberbox .normal {
+color:black;
+}
+/*禁用样式*/
+.numberbox .disable {
+color: #ccc;
+}
+.bottom{
+  display:flex;
+  width:100%;
+  background: #fff;
+  position:fixed;
+  bottom:0%;
+}
+.total_checkbox{
+  margin-left:14rpx;
+  margin-top:10rpx;
+}
+.all{
+  font-size:14px;
+  color:#515151;
+  margin-top:15rpx;
+}
+.money{
+  position:relative;
+  right:-10%;
+  margin-top:14rpx;
+  width:45%;
+  height:50rpx;
+}
+.moneynew{
+  display:none;
+}
+.total_total{
+  font-size:14px;
+  font-weight:bold;
+}
+.total_price{
+  font-size:14px;
+  font-weight:bold;
+  color:red;
+
+}
+.pay{
+  width:142rpx;
+  height:50rpx;
+  background: red;
+  padding:20rpx 0rpx;
+  text-align: center;
+  font-size:14px;
+  color:#fff;
+  position:relative;
+  left:17%;
+}
+.paynew{
+  width:148rpx;
+  height:50rpx;
+  background:#ccc;
+  margin-left:62%;
+  padding:20rpx 0rpx;
+  text-align: center;
+  font-size:14px;
+  color:#fff;
+}

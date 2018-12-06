@@ -1,0 +1,15 @@
+<!--pages/search/search.wxml-->
+<import  src="/pages/post/input/input" />
+<view class="top">
+   <template is="post_item"> </template>
+</view>
+<view class="book" wx:for="{{list}}" wx:key="item.id">
+   <view class="book1">
+      <image src="{{'http://127.0.0.1:4000/'+item.pic}}" />
+   </view>
+   <view class="book2">
+     <text class="title">{{item.title}}</text>
+     <text class="price">{{item.price}}</text>
+     <image src="/pages/img/购物车 (1).png" ></image>
+   </view>
+</view>

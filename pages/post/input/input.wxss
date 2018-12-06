@@ -1,0 +1,15 @@
+.input{
+  display:flex;
+  justify-content: space-between;
+  margin-left:30rpx;
+}
+.input input{
+   background-image:url(http://127.0.0.1:4000/img/search.png);
+   background-size:45rpx 45rpx;
+   background-repeat:no-repeat;
+   font-size:14px;
+   width:78%;
+   border:1px solid #ccc;
+   border-radius:15px;
+   padding-left:55rpx;
+}

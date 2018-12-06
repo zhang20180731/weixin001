@@ -1,0 +1,53 @@
+<!--pages/shopping/shopping.wxml-->
+<import src="/pages/post/input/input"/>
+<view class="top">
+  <template is="post_item"></template>
+  <view class="fenlei">
+      <image src="{{click==1?'/pages/img/分类.png':'/pages/img/fl.png'}}" class="pic" bindtap="ys"></image>
+  </view>
+</view>
+<view class="choose">
+   <view  data-id="0" bindtap="navbarTap" class="block {{currentTab ==0 ? 'active' : ''}}">
+      <text bindtap="show"> 年级</text>
+      <text class="sj"></text>
+   </view>
+   <view  data-id="1" bindtap="navbarTap" class="block {{currentTab == 1? 'active' : ''}}">
+      <text>学科</text>
+      <text class="sj"></text>
+   </view>
+   <view  data-id="2" bindtap="navbarTap" class="block {{currentTab == 2 ? 'active' : ''}}">
+      <text>版本</text>
+      <text class="sj"></text>
+   </view>  
+</view>
+<view wx:if="{{currentTab==0}}" class="fl_content">
+   <view class="f1" wx:for="{{content[0]}}" wx:key="item.id">
+       <text class="text" >{{item}}</text>
+   </view>
+</view>
+<view class="fl_content"  wx:elif="{{currentTab==1}}">
+   <view class="f1" wx:for="{{content[1]}}" wx:key="item.id">
+      <text class="text">{{item}}</text>
+   </view>
+</view>
+<view  class="fl_content" wx:elif="{{currentTab==2}}">
+   <view class="f1" wx:for="{{content[2]}}" wx:key="item.id">
+      <text class="text">{{item}}</text>
+   </view>
+</view>
+<!--内容-->
+<view class="{{click==1?'':'dd'}}">
+<view  wx:for="{{list}}" wx:key="item.id" class="{{click==1?'':'cc'}}" data-id="{{item.id}}" bindtap='getIndex'>
+    <view class="{{click==1?'book':'booknew'}}">
+        <view class="{{click==1?'book1':'book1new'}}">
+          <image src="{{'http://127.0.0.1:4000/'+item.pic}}"></image>
+        </view>
+        <view class="{{click==1?'book2':'book2new'}}">
+          <text class="{{click==1?'title':'titlenew'}}">{{item.title}}</text>
+          <text class="{{click==1?'price':'pricenew'}}">{{item.price}}</text>
+          <image src="/pages/img/购物车 (1).png" catchtap="addCart" data-id="{{item.id}}"></image>
+        </view>
+    </view>
+</view>
+</view>
+

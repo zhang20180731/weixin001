@@ -1,0 +1,5 @@
+<template name="post_item">
+  <view class="input">
+     <input type="text" placeholder="请输入图书关键词" bindblur="getexplore"></input>
+  </view>
+</template>
